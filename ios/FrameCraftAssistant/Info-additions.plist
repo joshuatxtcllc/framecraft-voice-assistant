@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This is NOT a full Info.plist — Xcode generates and manages that for you
+  in a modern project. These are the keys you must add under your app
+  target's Info tab (or merge into Info.plist if your project uses one)
+  for microphone + speech recognition to work, and for the widget deep
+  link to open straight into listening.
+-->
+<plist version="1.0">
+<dict>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>FrameCraft Assistant needs the microphone to hear what you ask it.</string>
+
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>FrameCraft Assistant transcribes what you say so it can act on it.</string>
+
+    <!-- Registers the framecraftassistant:// URL scheme so the widget can
+         deep-link straight into the listening screen. -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>framecraftassistant</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>
