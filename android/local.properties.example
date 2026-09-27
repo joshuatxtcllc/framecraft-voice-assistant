@@ -1,0 +1,13 @@
+# Copy this file to local.properties (gitignored — never commit real
+# secrets) in the android/ folder, next to this file, and fill in real
+# values. Android Studio also needs an sdk.dir line here; it adds that
+# automatically the first time you open the project.
+
+# Free AccessKey from https://console.picovoice.ai (sign up, copy your
+# key — used for on-device wake-word detection).
+PICOVOICE_ACCESS_KEY=
+
+# Same Railway backend URL and shared secret used by the iOS app —
+# see /server/README.md and /ios/README.md.
+BACKEND_URL=https://YOUR-APP.up.railway.app
+ASSISTANT_API_KEY=YOUR_ASSISTANT_API_KEY
