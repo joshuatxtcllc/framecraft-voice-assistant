@@ -1,0 +1,19 @@
+[Unit]
+Description=FrameCraft voice assistant - always-on wake-word listener
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Adjust these two paths to match where you cloned the repo and your venv.
+WorkingDirectory=/home/pi/framecraft-voice-assistant/listener/src
+ExecStart=/home/pi/framecraft-voice-assistant/listener/.venv/bin/python main.py
+Restart=on-failure
+RestartSec=5
+User=pi
+# Give it access to the audio group (mic/speaker) — usually already true
+# for the default `pi` user, but explicit here for clarity.
+SupplementaryGroups=audio
+
+[Install]
+WantedBy=multi-user.target

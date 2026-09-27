@@ -1,0 +1,19 @@
+# Core wake-word engine — real-time, runs fine on a Raspberry Pi 4/5 CPU.
+openwakeword>=0.6.0
+
+# Audio I/O
+sounddevice>=0.4.6
+numpy>=1.26.0
+scipy>=1.11.0
+
+# HTTP to the backend + OpenAI (Whisper transcription, TTS)
+requests>=2.31.0
+openai>=1.50.0
+
+# Playback of the TTS response. pydub needs ffmpeg installed on the
+# system (`sudo apt install ffmpeg` on Raspberry Pi OS/Debian) to decode
+# the mp3 TTS response.
+simpleaudio>=1.0.4
+pydub>=0.25.1
+
+python-dotenv>=1.0.1
